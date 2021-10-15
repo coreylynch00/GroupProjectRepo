@@ -23,7 +23,7 @@ import java.text.BreakIterator;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     //Declare Variables
-    TextView register;
+    TextView register, forgotPassword;
     EditText editTextEmail, editTextPassword;
     Button login;
     FirebaseAuth mAuth;
@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         register = (TextView) findViewById(R.id.textViewRegister);
         register.setOnClickListener(this);
+        forgotPassword = (TextView) findViewById(R.id.textViewForgotPassword);
+        forgotPassword.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
     }
 
@@ -48,13 +50,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         //Switch statement to determine what action to take depending on what is clicked
         switch (v.getId()){
-            //If register is clicked, redirect to register page
+            //If register is clicked, redirect to register activity
             case R.id.textViewRegister:
                 startActivity(new Intent(this, RegisterUser.class));
                 break;
             //If login is clicked, call the userLogin function
             case R.id.buttonLogin:
                 userLogin();
+                break;
+            //If forgot password is clicked, redirect to forgot password activity
+            case R.id.textViewForgotPassword:
+                startActivity(new Intent(this, ForgotPassword.class));
                 break;
         }
     }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -76,6 +77,13 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         //Check is user input is empty, if so, give error message
         if(email.isEmpty()){
             editTextEmail.setError("You must enter an email address!");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        //Check email address is valid - format (@domain.com, etc.)
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            editTextEmail.setError("Provide a valid email address!");
             editTextEmail.requestFocus();
             return;
         }
