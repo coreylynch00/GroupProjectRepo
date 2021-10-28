@@ -6,68 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".RegisterUser">
 
-    <LinearLayout
-        android:layout_width="358dp"
-        android:layout_height="619dp"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="387dp"
+        android:layout_height="691dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478">
 
-        <ImageView
-            android:id="@+id/imageViewLogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo" />
+        <LinearLayout
+            android:layout_width="385dp"
+            android:layout_height="690dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textViewMessage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:paddingBottom="30dp"
-            android:textStyle="bold"
-            android:textColor="@color/teal_200"
-            android:gravity="center"
-            android:text="Please enter your details below to register:" />
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logo" />
 
-        <EditText
-            android:id="@+id/editTextName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Full Name" />
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:text="Please enter your details below to register:"
+                android:textColor="@color/teal_200"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Age" />
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="Email" />
+            <EditText
+                android:id="@+id/editTextAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Age"
+                android:minHeight="48dp" />
 
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/buttonRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="Register" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:paddingLeft="3dp"
+                    android:text="Gender:" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textColor="#696969"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="#696969"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
