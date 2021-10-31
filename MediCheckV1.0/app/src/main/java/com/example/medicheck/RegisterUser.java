@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     FirebaseAuth mAuth;
     EditText editTextName, editTextAge, editTextEmail, editTextPassword;
     Button register;
+    RadioGroup genderRadioGroup, diabetesRadioGroup, heartRadioGroup;
+    RadioButton genderBtn, diabetesBtn, heartBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,9 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         editTextAge = (EditText) findViewById(R.id.editTextAge);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        genderRadioGroup = (RadioGroup) findViewById(R.id.radioGroupGender);
+        diabetesRadioGroup = (RadioGroup) findViewById(R.id.radioGroupDiabetes);
+        heartRadioGroup = (RadioGroup) findViewById(R.id.radioGroupHeart);
         register = (Button) findViewById(R.id.buttonRegister);
         register.setOnClickListener(this);
     }
@@ -59,6 +66,17 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String name = editTextName.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
+        //Get user input for radio buttons
+        int genderID = genderRadioGroup.getCheckedRadioButtonId();
+        genderBtn = findViewById(genderID);
+        String genderChoice = genderBtn.getText().toString();
+        int diabetesID = diabetesRadioGroup.getCheckedRadioButtonId();
+        diabetesBtn = findViewById(diabetesID);
+        String diabetesChoice = diabetesBtn.getText().toString();
+        int heartID = heartRadioGroup.getCheckedRadioButtonId();
+        heartBtn = findViewById(heartID);
+        String heartChoice = heartBtn.getText().toString();
+
 
         //Check is user input is empty, if so, give error message
         if (name.isEmpty()){
@@ -109,7 +127,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //If successful, create user object and pass it to Firebase
                         if(task.isSuccessful()){
-                            User user = new User(name, age, email);
+                            User user = new User(name, age, email, genderChoice, diabetesChoice, heartChoice);
                             //Passing user object to Firebase
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
