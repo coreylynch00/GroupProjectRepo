@@ -60,30 +60,87 @@
                 android:hint="Age"
                 android:minHeight="48dp" />
 
+            <TextView
+                android:id="@+id/textViewGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:paddingLeft="3dp"
+                android:text="Gender?" />
+
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/textViewGender"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:paddingLeft="3dp"
-                    android:text="Gender:" />
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupGender">
 
                 <RadioButton
                     android:id="@+id/radioButtonMale"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Male"
-                    android:textColor="#696969"/>
+                    android:textColor="#696969" />
 
                 <RadioButton
                     android:id="@+id/radioButtonFemale"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Female"
+                    android:textColor="#696969"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewDiabetes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:paddingLeft="3dp"
+                android:text="Do you suffer from DIABETES?" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupDiabetes">
+
+                <RadioButton
+                    android:id="@+id/radioButtonDiabetesYes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="#696969"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonDiabetesNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="#696969"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewHeart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:paddingLeft="3dp"
+                android:text="Do you suffer from any HEART CONDITIONS?" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupHeart">
+
+                <RadioButton
+                    android:id="@+id/radioButtonHeartYes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="#696969"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonHeartNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No"
                     android:textColor="#696969"/>
             </RadioGroup>
 
@@ -111,6 +168,9 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:textSize="30dp" />
+
         </LinearLayout>
+
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
