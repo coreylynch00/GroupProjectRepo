@@ -20,7 +20,6 @@ public class UserDetails extends AppCompatActivity {
     FirebaseUser user;
     DatabaseReference reference;
     String userID;
-    TextView textViewName, textViewAge, textViewEmail, textViewMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
