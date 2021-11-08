@@ -63,5 +63,40 @@
             android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewGenderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender: " />
+
+        <TextView
+            android:id="@+id/textViewGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDiabetesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diabetes: " />
+
+        <TextView
+            android:id="@+id/textViewDiabetes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewHeartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heart Conditions: " />
+
+        <TextView
+            android:id="@+id/textViewHeart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,13 +30,13 @@
             android:textStyle="bold"
             android:textColor="@color/teal_200"
             android:paddingBottom="30dp"
-            android:text="Below are the details for your current GP: "/>
+            android:text="Below are the details for your current Insurer: "/>
 
         <TextView
             android:id="@+id/textViewNameTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name: " />
+            android:text="Insurance Company: " />
 
         <TextView
             android:id="@+id/textViewName"
@@ -47,7 +47,7 @@
             android:id="@+id/textViewEmailTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email Address: " />
+            android:text="Insurer Email: " />
 
         <TextView
             android:id="@+id/textViewEmail"
@@ -58,7 +58,7 @@
             android:id="@+id/textViewPhoneTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phone Number: " />
+            android:text="Insurer Contact Number: " />
 
         <TextView
             android:id="@+id/textViewPhone"

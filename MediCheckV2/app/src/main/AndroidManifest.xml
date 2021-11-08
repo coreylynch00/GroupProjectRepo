@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCheckV2">
         <activity
+            android:name=".InsuranceDetails"
+            android:exported="true" />
+        <activity
             android:name=".UserDetails"
             android:exported="true" />
         <activity

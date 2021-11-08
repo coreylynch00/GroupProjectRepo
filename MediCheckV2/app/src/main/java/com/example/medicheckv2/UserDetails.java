@@ -38,6 +38,9 @@ public class UserDetails extends AppCompatActivity {
         final TextView textViewAge = (TextView) findViewById(R.id.textViewAge);
         final TextView textViewEmail = (TextView) findViewById(R.id.textViewEmail);
         final TextView textViewMessage  = (TextView) findViewById(R.id.textViewMessage);
+        final TextView textViewGender = (TextView) findViewById(R.id.textViewGender);
+        final TextView textViewDiabetes = (TextView) findViewById(R.id.textViewDiabetes);
+        final TextView textViewHeart = (TextView) findViewById(R.id.textViewHeart);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -48,11 +51,17 @@ public class UserDetails extends AppCompatActivity {
                     String name = user.name;
                     String age = user.age;
                     String email = user.email;
+                    String gender = user.gender;
+                    String diabetes = user.diabetes;
+                    String heart = user.heart;
 
                     textViewMessage.setText("Welcome, " + name + " , here are your details on record:");
                     textViewName.setText(name);
                     textViewAge.setText(age);
                     textViewEmail.setText(email);
+                    textViewGender.setText(gender);
+                    textViewDiabetes.setText(diabetes);
+                    textViewHeart.setText(heart);
                 }
             }
 

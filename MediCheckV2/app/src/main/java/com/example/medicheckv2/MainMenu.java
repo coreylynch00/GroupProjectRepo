@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainMenu extends AppCompatActivity implements View.OnClickListener{
 
     //Declare variables
-    Button logout, userDetails;
+    Button logout, userDetails, gpDetails, insuranceDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +20,15 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_main_menu);
 
         //Initialize variables and set onClickListener
-        logout = (Button) findViewById(R.id.buttonLogout);
+        logout = findViewById(R.id.buttonLogout);
         logout.setOnClickListener(this);
-        userDetails = (Button) findViewById(R.id.buttonViewDetails);
+        userDetails = findViewById(R.id.buttonViewDetails);
         userDetails.setOnClickListener(this);
+        gpDetails = findViewById(R.id.buttonGPDeatils);
+        gpDetails.setOnClickListener(this);
+        insuranceDetails = findViewById(R.id.buttonInsuranceDeatils);
+        insuranceDetails.setOnClickListener(this);
+
     }
 
     //onClick method
@@ -39,6 +44,12 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener{
             case R.id.buttonViewDetails:
                 startActivity(new Intent(MainMenu.this, UserDetails.class));
                 break;
+            //If GP details button clicked
+            case R.id.buttonGPDeatils:
+                startActivity(new Intent(MainMenu.this, GPDetails.class));
+            //If Insurance details button is clicked
+            case R.id.buttonInsuranceDeatils:
+                startActivity(new Intent(MainMenu.this, GPDetails.class));
         }
     }
 }

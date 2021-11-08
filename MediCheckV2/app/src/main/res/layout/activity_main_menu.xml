@@ -47,43 +47,31 @@
                 android:text="View My Details" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/buttonGPDeatils"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="View GP Details" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/buttonInsuranceDeatils"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="View Insurance Details" />
 
             <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Contact GP" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Contact Insurance" />
-
-            <Button
-                android:id="@+id/button6"
+                android:id="@+id/buttonMediCoin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="MediCoin" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/buttonMediPredict"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="MediPredict" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/buttonReviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Reviews" />
