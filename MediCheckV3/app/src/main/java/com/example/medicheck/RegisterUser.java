@@ -143,7 +143,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                         //If successfully registered, provide message
                                         Toast.makeText(RegisterUser.this, "User Successfully Registered", Toast.LENGTH_LONG).show();
                                         //Redirect to main activity to login
-                                        //startActivity(new Intent(RegisterUser.this, MainActivity.class));
+                                        startActivity(new Intent(RegisterUser.this, MainActivity.class));
                                     }
                                     //If registration is unsuccessful, give error message
                                     else{
