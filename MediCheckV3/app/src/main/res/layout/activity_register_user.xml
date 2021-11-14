@@ -67,7 +67,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
                 android:paddingLeft="3dp"
-                android:text="Gender?" />
+                android:text="Gender?"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -79,14 +80,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Male"
-                    android:textColor="#696969" />
+                    android:buttonTint="@color/blue"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
                     android:id="@+id/radioButtonFemale"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Female"
-                    android:textColor="#696969"/>
+                    android:buttonTint="@color/blue"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <TextView
@@ -95,7 +98,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
                 android:paddingLeft="3dp"
-                android:text="Do you suffer from DIABETES?" />
+                android:text="Do you suffer from DIABETES?"
+                android:textColor="@color/black" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -107,14 +111,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Yes"
-                    android:textColor="#696969"/>
+                    android:buttonTint="@color/blue"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
                     android:id="@+id/radioButtonDiabetesNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
-                    android:textColor="#696969"/>
+                    android:buttonTint="@color/blue"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <TextView
@@ -123,7 +129,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
                 android:paddingLeft="3dp"
-                android:text="Do you suffer from any HEART CONDITIONS?" />
+                android:text="Do you suffer from any HEART CONDITIONS?"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -135,14 +142,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Yes"
-                    android:textColor="#696969"/>
+                    android:buttonTint="@color/blue"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
                     android:id="@+id/radioButtonHeartNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
-                    android:textColor="#696969"/>
+                    android:buttonTint="@color/blue"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <EditText
@@ -168,7 +177,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Register"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
         </LinearLayout>
 
