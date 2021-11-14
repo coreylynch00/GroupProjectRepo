@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserDetails"
-    android:background="@drawable/background2">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="359dp"
@@ -42,12 +42,13 @@
             android:layout_height="wrap_content"
             android:text="Name: "
             android:textStyle="bold"
-            android:textColor="#1889E0"/>
+            android:textColor="@color/red"/>
 
         <TextView
             android:id="@+id/textViewName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/textViewAgeTitle"
@@ -55,12 +56,13 @@
             android:layout_height="wrap_content"
             android:text="Age: "
             android:textStyle="bold"
-            android:textColor="#1889E0"/>
+            android:textColor="@color/red"/>
 
         <TextView
             android:id="@+id/textViewAge"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/textViewEmailTitle"
@@ -68,12 +70,13 @@
             android:layout_height="wrap_content"
             android:text="Email Address: "
             android:textStyle="bold"
-            android:textColor="#1889E0"/>
+            android:textColor="@color/red"/>
 
         <TextView
             android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/textViewGenderTitle"
@@ -81,12 +84,13 @@
             android:layout_height="wrap_content"
             android:text="Gender: "
             android:textStyle="bold"
-            android:textColor="#1889E0"/>
+            android:textColor="@color/red"/>
 
         <TextView
             android:id="@+id/textViewGender"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/textViewDiabetesTitle"
@@ -94,12 +98,13 @@
             android:layout_height="wrap_content"
             android:text="Diabetes: "
             android:textStyle="bold"
-            android:textColor="#1889E0"/>
+            android:textColor="@color/red"/>
 
         <TextView
             android:id="@+id/textViewDiabetes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/textViewHeartTitle"
@@ -107,12 +112,13 @@
             android:layout_height="wrap_content"
             android:text="Heart Conditions: "
             android:textStyle="bold"
-            android:textColor="#1889E0"/>
+            android:textColor="@color/red"/>
 
         <TextView
             android:id="@+id/textViewHeart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
 
 
     </LinearLayout>

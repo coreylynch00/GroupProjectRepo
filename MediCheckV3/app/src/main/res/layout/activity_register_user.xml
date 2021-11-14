@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterUser"
-    android:background="@drawable/background2">
+    android:background="@drawable/background">
 
     <ScrollView
         android:layout_width="387dp"
@@ -80,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Male"
-                    android:buttonTint="@color/blue"
+                    android:buttonTint="@color/red"
                     android:textColor="@color/black"/>
 
                 <RadioButton
@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Female"
-                    android:buttonTint="@color/blue"
+                    android:buttonTint="@color/red"
                     android:textColor="@color/black"/>
             </RadioGroup>
 
@@ -111,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Yes"
-                    android:buttonTint="@color/blue"
+                    android:buttonTint="@color/red"
                     android:textColor="@color/black"/>
 
                 <RadioButton
@@ -119,7 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
-                    android:buttonTint="@color/blue"
+                    android:buttonTint="@color/red"
                     android:textColor="@color/black"/>
             </RadioGroup>
 
@@ -142,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Yes"
-                    android:buttonTint="@color/blue"
+                    android:buttonTint="@color/red"
                     android:textColor="@color/black"/>
 
                 <RadioButton
@@ -150,7 +150,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No"
-                    android:buttonTint="@color/blue"
+                    android:buttonTint="@color/red"
                     android:textColor="@color/black"/>
             </RadioGroup>
 
