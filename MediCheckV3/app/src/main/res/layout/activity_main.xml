@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
 
     <LinearLayout
@@ -29,7 +30,11 @@
             android:textSize="20dp"
             android:paddingBottom="30dp"
             android:textStyle="bold"
-            android:textColor="@color/teal_200"
+            android:textColor="#1889E0"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
             android:gravity="center"
             android:text="Thank You For Using MediCheck! Please Login Below:" />
 
@@ -54,7 +59,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30dp"
-            android:text="Login" />
+            android:text="Login"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +76,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingTop="15dp"
-                android:text="Forgot Password?" />
+                android:text="Forgot Password?"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/textViewRegister"
@@ -75,7 +86,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingTop="15dp"
-                android:text="Register" />
+                android:text="Register"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

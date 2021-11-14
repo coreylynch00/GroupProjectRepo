@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserDetails">
+    tools:context=".UserDetails"
+    android:background="@drawable/background2">
 
     <LinearLayout
         android:layout_width="359dp"
@@ -28,7 +29,11 @@
             android:gravity="center"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="@color/teal_200"
+            android:textColor="#1889E0"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
             android:paddingBottom="30dp"
             android:text="Below are the details for your current GP: "/>
 
@@ -36,7 +41,9 @@
             android:id="@+id/textViewNameTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name: " />
+            android:text="GP Name: "
+            android:textStyle="bold"
+            android:textColor="#1889E0"/>
 
         <TextView
             android:id="@+id/textViewName"
@@ -47,7 +54,9 @@
             android:id="@+id/textViewEmailTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email Address: " />
+            android:text="GP Email Address: "
+            android:textStyle="bold"
+            android:textColor="#1889E0"/>
 
         <TextView
             android:id="@+id/textViewEmail"
@@ -58,7 +67,9 @@
             android:id="@+id/textViewPhoneTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phone Number: " />
+            android:text="GP Phone Number: "
+            android:textStyle="bold"
+            android:textColor="#1889E0"/>
 
         <TextView
             android:id="@+id/textViewPhone"

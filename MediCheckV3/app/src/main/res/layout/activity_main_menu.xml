@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenu">
+    tools:context=".MainMenu"
+    android:background="@drawable/background2">
 
     <ScrollView
         android:layout_width="379dp"
@@ -36,45 +37,73 @@
                 android:gravity="center"
                 android:paddingBottom="30dp"
                 android:text="MediCheck Main Menu"
-                android:textColor="@color/teal_200"
+                android:textColor="#1889E0"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
 
             <Button
                 android:id="@+id/buttonViewDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View My Details" />
+                android:text="View My Details"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
             <Button
                 android:id="@+id/buttonGPDeatils"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View GP Details" />
+                android:text="View GP Details"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
             <Button
                 android:id="@+id/buttonInsuranceDeatils"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View Insurance Details" />
+                android:text="View Insurance Details"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
             <Button
                 android:id="@+id/buttonMediCoin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MediCoin" />
+                android:text="MediCoin"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
             <Button
                 android:id="@+id/buttonMediPredict"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MediPredict" />
+                android:text="MediPredict"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
             <Button
                 android:id="@+id/buttonReviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Reviews" />
+                android:text="Reviews"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
             <Button
                 android:id="@+id/buttonLogout"
@@ -82,7 +111,11 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#A30000"
                 android:text="Logout"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
 
         </LinearLayout>
 
