@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "201568892913",
-    "project_id": "testloginreg-29912",
-    "storage_bucket": "testloginreg-29912.appspot.com"
+    "project_number": "797392677036",
+    "project_id": "medicheckv3",
+    "storage_bucket": "medicheckv3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:201568892913:android:8c7c46e889e128e9ae7650",
+        "mobilesdk_app_id": "1:797392677036:android:b2888f09d62473b7c75709",
         "android_client_info": {
-          "package_name": "com.example.testloginreg"
+          "package_name": "com.example.medicheck"
         }
       },
       "oauth_client": [
         {
-          "client_id": "201568892913-09ej005u5gvkcijr782iofgga3jrp86p.apps.googleusercontent.com",
+          "client_id": "797392677036-qpfod0mhruf4o1k7cvo539mff41kf8tp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD92gcMiZezOxgXcwbp-xRxzoHyM12y9kQ"
+          "current_key": "AIzaSyCz7izBZB-dP49EEsF1Yz-ktS8XLxFV2oo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "201568892913-09ej005u5gvkcijr782iofgga3jrp86p.apps.googleusercontent.com",
+              "client_id": "797392677036-qpfod0mhruf4o1k7cvo539mff41kf8tp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

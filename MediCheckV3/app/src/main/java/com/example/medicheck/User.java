@@ -1,4 +1,4 @@
-package com.example.testloginreg;
+package com.example.medicheck;
 
 public class User {
 

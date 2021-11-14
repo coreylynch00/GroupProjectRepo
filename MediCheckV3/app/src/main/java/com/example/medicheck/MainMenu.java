@@ -1,4 +1,4 @@
-package com.example.testloginreg;
+package com.example.medicheck;
 
 import androidx.appcompat.app.AppCompatActivity;
 
