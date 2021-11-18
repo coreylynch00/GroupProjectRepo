@@ -47,10 +47,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         heartRadioGroup = (RadioGroup) findViewById(R.id.radioGroupHeart);
         register = findViewById(R.id.buttonRegister);
         register.setOnClickListener(this);
-
-        //FirebaseDatabase database = FirebaseDatabase.getInstance();
-        //DatabaseReference myRef = database.getReference("message2");
-        //myRef.setValue("hello world!");
     }
 
     @Override
@@ -152,7 +148,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                 }
                             });
 
-                        }else{
+                        }
+                        else{
                             Toast.makeText(RegisterUser.this, "Failed to Register", Toast.LENGTH_LONG).show();
                         }
 

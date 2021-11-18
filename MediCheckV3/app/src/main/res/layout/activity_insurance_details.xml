@@ -7,86 +7,114 @@
     tools:context=".UserDetails"
     android:background="@drawable/background">
 
-    <LinearLayout
-        android:layout_width="359dp"
-        android:layout_height="668dp"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="379dp"
+        android:layout_height="706dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageViewLogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo" />
+        <LinearLayout
+            android:layout_width="359dp"
+            android:layout_height="668dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textViewMessage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#1889E0"
-            android:shadowColor="@color/black"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="3"
-            android:paddingBottom="30dp"
-            android:text="Below are the details for your current Insurer: "/>
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logo" />
 
-        <TextView
-            android:id="@+id/textViewNameTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Insurance Company: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#1889E0"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:paddingBottom="30dp"
+                android:text="Below are the details for your current Insurer: "/>
 
-        <TextView
-            android:id="@+id/textViewName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insurance Company: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textViewEmailTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Insurer Email: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/textViewEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewEmailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insurer Email: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textViewPhoneTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Insurer Contact Number: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/textViewPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewPhoneTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insurer Contact Number: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <Button
-            android:id="@+id/callButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Call"
-            android:shadowColor="@color/black"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="3"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textViewPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
+
+            <Button
+                android:id="@+id/callButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
+
+            <TextView
+                android:id="@+id/textViewRegisterIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register or Change Your Insurance Details Here!"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingTop="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

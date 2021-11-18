@@ -21,15 +21,28 @@ import com.google.firebase.database.ValueEventListener;
 
 public class GPDetails extends AppCompatActivity {
 
+    FirebaseUser gp;
+    DatabaseReference reference;
+    String gpID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpdetails);
 
-        final TextView textViewName = (TextView) findViewById(R.id.textViewName);
-        final TextView textViewEmail = (TextView) findViewById(R.id.textViewEmail);
-        final TextView textViewPhone = (TextView) findViewById(R.id.textViewPhone);
-        Button callButton = (Button) findViewById(R.id.callButton);
+        //Initialize variables
+        //Get the instance of the current user who is logged in
+        gp = FirebaseAuth.getInstance().getCurrentUser();
+        //Getting reference of user collections
+        reference = FirebaseDatabase.getInstance().getReference("GP");
+        //Get the unique ID of logged in user
+        gpID = gp.getUid();
+
+        TextView textViewRegisterGP = findViewById(R.id.textViewRegisterGP);
+        final TextView textViewName =  findViewById(R.id.textViewName);
+        final TextView textViewEmail =  findViewById(R.id.textViewEmail);
+        final TextView textViewPhone =  findViewById(R.id.textViewPhone);
+        Button callButton =  findViewById(R.id.callButton);
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +56,33 @@ public class GPDetails extends AppCompatActivity {
                 intent.setData(Uri.parse("tel:" + num));
                 //Start Activity
                 startActivity(intent);
+            }
+        });
+        textViewRegisterGP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GPDetails.this, RegisterGP.class));
+            }
+        });
+        reference.child(gpID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                GP gp = snapshot.getValue(GP.class);
+
+                if(gp != null){
+                    String name = gp.name;
+                    String email = gp.email;
+                    String number = gp.number;
+
+                    textViewName.setText(name);
+                    textViewEmail.setText(email);
+                    textViewPhone.setText(number);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(GPDetails.this, "Error!", Toast.LENGTH_LONG).show();
             }
         });
     }

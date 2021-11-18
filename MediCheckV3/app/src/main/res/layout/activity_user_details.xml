@@ -7,119 +7,144 @@
     tools:context=".UserDetails"
     android:background="@drawable/background">
 
-    <LinearLayout
-        android:layout_width="359dp"
-        android:layout_height="668dp"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="379dp"
+        android:layout_height="706dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageViewLogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo" />
+        <LinearLayout
+            android:layout_width="359dp"
+            android:layout_height="668dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textViewMessage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#1889E0"
-            android:shadowColor="@color/black"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="3"
-            android:paddingBottom="30dp" />
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logo" />
 
-        <TextView
-            android:id="@+id/textViewNameTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Name: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#1889E0"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:paddingBottom="30dp" />
 
-        <TextView
-            android:id="@+id/textViewName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textViewAgeTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Age: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/textViewAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewAgeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textViewEmailTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email Address: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/textViewEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewEmailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textViewGenderTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gender: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/textViewGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewGenderTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textViewDiabetesTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Diabetes: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/textViewDiabetes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewDiabetesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diabetes: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textViewHeartTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Heart Conditions: "
-            android:textStyle="bold"
-            android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/textViewDiabetes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:paddingBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/textViewHeart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/textViewHeartTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heart Conditions: "
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
 
+            <TextView
+                android:id="@+id/textViewHeart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
