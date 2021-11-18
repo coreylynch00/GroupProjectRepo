@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCheck">
         <activity
+            android:name=".RegisterInsurance"
+            android:exported="true" />
+        <activity
             android:name=".RegisterGP"
             android:exported="true" />
         <activity

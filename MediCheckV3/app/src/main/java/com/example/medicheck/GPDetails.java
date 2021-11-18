@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,18 +31,23 @@ public class GPDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpdetails);
 
-        //Initialize variables
-        //Get the instance of the current user who is logged in
         gp = FirebaseAuth.getInstance().getCurrentUser();
-        //Getting reference of user collections
         reference = FirebaseDatabase.getInstance().getReference("GP");
-        //Get the unique ID of logged in user
         gpID = gp.getUid();
 
         TextView textViewRegisterGP = findViewById(R.id.textViewRegisterGP);
         final TextView textViewName =  findViewById(R.id.textViewName);
         final TextView textViewEmail =  findViewById(R.id.textViewEmail);
         final TextView textViewPhone =  findViewById(R.id.textViewPhone);
+
+        ImageView logo = findViewById(R.id.imageViewLogo);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GPDetails.this, MainMenu.class));
+            }
+        });
+
         Button callButton =  findViewById(R.id.callButton);
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,12 +64,14 @@ public class GPDetails extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         textViewRegisterGP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(GPDetails.this, RegisterGP.class));
             }
         });
+
         reference.child(gpID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -37,7 +37,6 @@ public class RegisterGP extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            //If Register button is clicked, called registerUser() function
             case R.id.buttonRegisterGP:
                 registerGP();
                 break;

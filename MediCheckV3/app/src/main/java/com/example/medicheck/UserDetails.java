@@ -3,7 +3,10 @@ package com.example.medicheck;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,13 +37,21 @@ public class UserDetails extends AppCompatActivity {
         //Get the unique ID of logged in user
         userID = user.getUid();
 
-        final TextView textViewName = (TextView) findViewById(R.id.textViewName);
-        final TextView textViewAge = (TextView) findViewById(R.id.textViewAge);
-        final TextView textViewEmail = (TextView) findViewById(R.id.textViewEmail);
-        final TextView textViewMessage  = (TextView) findViewById(R.id.textViewMessage);
-        final TextView textViewGender = (TextView) findViewById(R.id.textViewGender);
-        final TextView textViewDiabetes = (TextView) findViewById(R.id.textViewDiabetes);
-        final TextView textViewHeart = (TextView) findViewById(R.id.textViewHeart);
+        final TextView textViewName = findViewById(R.id.textViewName);
+        final TextView textViewAge = findViewById(R.id.textViewAge);
+        final TextView textViewEmail = findViewById(R.id.textViewEmail);
+        final TextView textViewMessage  = findViewById(R.id.textViewMessage);
+        final TextView textViewGender = findViewById(R.id.textViewGender);
+        final TextView textViewDiabetes = findViewById(R.id.textViewDiabetes);
+        final TextView textViewHeart = findViewById(R.id.textViewHeart);
+
+        ImageView logo = findViewById(R.id.imageViewLogo);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserDetails.this, MainMenu.class));
+            }
+        });
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
