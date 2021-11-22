@@ -8,12 +8,15 @@
     android:background="@drawable/background">
 
     <ScrollView
-        android:layout_width="379dp"
-        android:layout_height="706dp"
+        android:layout_width="387dp"
+        android:layout_height="691dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478">
 
         <LinearLayout
             android:layout_width="359dp"
