@@ -30,11 +30,7 @@
             android:textSize="20dp"
             android:paddingBottom="30dp"
             android:textStyle="bold"
-            android:textColor="#1889E0"
-            android:shadowColor="@color/black"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="3"
+            android:textColor="@color/red"
             android:gravity="center"
             android:text="Thank You For Using MediCheck! Please Login Below:" />
 
@@ -80,7 +76,8 @@
                 android:paddingTop="15dp"
                 android:text="Forgot Password?"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="17sp"/>
 
             <TextView
                 android:id="@+id/textViewRegister"
@@ -88,7 +85,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingTop="15dp"
+                android:paddingStart="140dp"
                 android:text="Register"
+                android:textSize="17sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
         </LinearLayout>

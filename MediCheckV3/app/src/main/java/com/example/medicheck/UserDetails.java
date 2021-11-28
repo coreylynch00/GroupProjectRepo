@@ -66,7 +66,7 @@ public class UserDetails extends AppCompatActivity {
                     String diabetes = user.diabetes;
                     String heart = user.heart;
 
-                    textViewMessage.setText("Welcome, " + name + " , here are your details on record:");
+                    textViewMessage.setText("Welcome, " + name + ", here are your details on record:");
                     textViewName.setText(name);
                     textViewAge.setText(age);
                     textViewEmail.setText(email);
