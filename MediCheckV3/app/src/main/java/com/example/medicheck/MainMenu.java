@@ -47,10 +47,14 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener{
             //If GP details button clicked
             case R.id.buttonGPDeatils:
                 startActivity(new Intent(MainMenu.this, GPDetails.class));
-                //If Insurance details button is clicked
                 break;
+            //If Insurance details button is clicked
             case R.id.buttonInsuranceDeatils:
                 startActivity(new Intent(MainMenu.this, InsuranceDetails.class));
+                break;
+            //If Reviews button is clicked
+            case R.id.buttonReviews:
+                startActivity(new Intent(MainMenu.this, Reviews.class));
                 break;
         }
     }
