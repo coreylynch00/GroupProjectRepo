@@ -10,6 +10,8 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
 from keras.callbacks import ModelCheckpoint
 
-df = pd.read_csv('pima-indians-diabetes.csv')
-print(df.head())
+# df = pd.read_csv('pima-indians-diabetes.csv')
+# print(df.head())
+
+
 

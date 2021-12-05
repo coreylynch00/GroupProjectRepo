@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCheck">
         <activity
+            android:name=".heartDiseasePredict"
+            android:exported="true" />
+        <activity
+            android:name=".diabetesPredict"
+            android:exported="true" />
+        <activity
+            android:name=".MediPredict"
+            android:exported="true" />
+        <activity
             android:name=".Reviews"
             android:exported="true" />
         <activity

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reviews"
+    tools:context=".MediPredict"
     android:background="@drawable/background">
 
     <ScrollView
@@ -31,15 +31,36 @@
                 app:srcCompat="@drawable/logo" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textViewMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="30dp"
-                android:text="MediCheck Reviews"
+                android:text="Welcome to MediPredict, please choose from one of the options below:"
                 android:textColor="@color/red"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonDiabetesPredict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diabetes MediPredict"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
+
+            <Button
+                android:id="@+id/buttonHeartDiseasePredict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heart Disease MediPredict"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
+
         </LinearLayout>
     </ScrollView>
 

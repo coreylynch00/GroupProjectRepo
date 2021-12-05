@@ -42,8 +42,7 @@
                 android:text="MediCheck Main Menu"
                 android:textColor="@color/red"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:shadowRadius="3" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/buttonViewDetails"

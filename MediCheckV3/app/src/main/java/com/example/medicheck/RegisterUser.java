@@ -38,13 +38,13 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
         //Initialize variables and set onClickListeners
         mAuth = FirebaseAuth.getInstance();
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextAge = (EditText) findViewById(R.id.editTextAge);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        genderRadioGroup = (RadioGroup) findViewById(R.id.radioGroupGender);
-        diabetesRadioGroup = (RadioGroup) findViewById(R.id.radioGroupDiabetes);
-        heartRadioGroup = (RadioGroup) findViewById(R.id.radioGroupHeart);
+        editTextName = findViewById(R.id.editTextName);
+        editTextAge = findViewById(R.id.editTextAge);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        genderRadioGroup = findViewById(R.id.radioGroupGender);
+        diabetesRadioGroup = findViewById(R.id.radioGroupDiabetes);
+        heartRadioGroup = findViewById(R.id.radioGroupHeart);
         register = findViewById(R.id.buttonRegister);
         register.setOnClickListener(this);
     }
