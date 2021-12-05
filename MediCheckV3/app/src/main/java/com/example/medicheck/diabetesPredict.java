@@ -99,7 +99,7 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
         }
 
         Diabetes diabetes = new Diabetes(pregnancies, glucose, bp, skinThickness, insulin, bmi, dpf);
-        FirebaseDatabase.getInstance().getReference("DiabetesMedicalReport ")
+        FirebaseDatabase.getInstance().getReference("DiabetesMedicalReport")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .setValue(diabetes).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -113,6 +113,5 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
-
     }
 }
