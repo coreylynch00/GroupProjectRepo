@@ -38,7 +38,15 @@
                 android:textStyle="bold"
                 android:textColor="@color/red"
                 android:paddingBottom="30dp"
-                android:text="Please enter your medical report results below in order to determine your chance of having diabetes:"/>
+                android:text="Enter your medical report results below in order to generate your diabetes prediction:"/>
+
+            <EditText
+                android:id="@+id/editTextAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Age"
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/editTextPregnancies"

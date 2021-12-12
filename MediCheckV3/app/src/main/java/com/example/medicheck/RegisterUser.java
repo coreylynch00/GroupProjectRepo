@@ -26,7 +26,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
     //Declare variables
     FirebaseAuth mAuth;
-    EditText editTextName, editTextAge, editTextEmail, editTextPassword;
+    EditText editTextName, editTextDob, editTextEmail, editTextPassword;
     Button register;
     RadioGroup genderRadioGroup, diabetesRadioGroup, heartRadioGroup;
     RadioButton genderBtn, diabetesBtn, heartBtn;
@@ -39,7 +39,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         //Initialize variables and set onClickListeners
         mAuth = FirebaseAuth.getInstance();
         editTextName = findViewById(R.id.editTextName);
-        editTextAge = findViewById(R.id.editTextAge);
+        editTextDob = findViewById(R.id.editTextDob);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         genderRadioGroup = findViewById(R.id.radioGroupGender);
@@ -66,7 +66,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
         String name = editTextName.getText().toString().trim();
-        String age = editTextAge.getText().toString().trim();
+        String dob = editTextDob.getText().toString().trim();
         //Get user input for radio buttons
         int genderID = genderRadioGroup.getCheckedRadioButtonId();
         genderBtn = findViewById(genderID);
@@ -87,9 +87,9 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         }
 
         //Check is user input is empty, if so, give error message
-        if(age.isEmpty()){
-            editTextAge.setError("You must enter your age!");
-            editTextAge.requestFocus();
+        if(dob.isEmpty()){
+            editTextDob.setError("You must enter your date of birth!");
+            editTextDob.requestFocus();
             return;
         }
 
@@ -128,7 +128,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //If successful, create user object and pass it to Firebase
                         if(task.isSuccessful()){
-                            User user = new User(name, age, email, gender, diabetes, heart);
+                            User user = new User(name, dob, email, gender, diabetes, heart);
                             //Passing user object to Firebase
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

@@ -2,13 +2,14 @@ package com.example.medicheck;
 
 public class Diabetes {
 
-    public String pregnancies, glucose, bp, skinThickness, insulin, bmi, dpf;
+    public String age, pregnancies, glucose, bp, skinThickness, insulin, bmi, dpf;
 
     public Diabetes(){
 
     }
 
-    public Diabetes(String pregnancies, String glucose, String bp, String skinThickness, String  insulin, String bmi, String dpf){
+    public Diabetes(String age, String pregnancies, String glucose, String bp, String skinThickness, String  insulin, String bmi, String dpf){
+        this.age = age;
         this.pregnancies = pregnancies;
         this.glucose = glucose;
         this.bp = bp;

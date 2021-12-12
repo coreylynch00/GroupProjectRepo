@@ -64,13 +64,13 @@
                 android:id="@+id/textViewAgeTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Age: "
+                android:text="Date Of Birth: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/textViewAge"
+                android:id="@+id/textViewDob"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"

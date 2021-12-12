@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class diabetesPredict extends AppCompatActivity implements View.OnClickListener{
 
     FirebaseAuth mAuth;
-    EditText editTextPregnancies, editTextGlucose, editTextBP, editTextSkinThickness, editTextInsulin, editTextBMI, editTextDPF;
+    EditText editTextAge, editTextPregnancies, editTextGlucose, editTextBP, editTextSkinThickness, editTextInsulin, editTextBMI, editTextDPF;
     Button registerDiabetes;
 
     @Override
@@ -27,6 +27,7 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_diabetes_predict);
 
         mAuth = FirebaseAuth.getInstance();
+        editTextAge = findViewById(R.id.editTextAge);
         editTextPregnancies = findViewById(R.id.editTextPregnancies);
         editTextGlucose = findViewById(R.id.editTextGlucose);
         editTextBP = findViewById(R.id.editTextBP);
@@ -48,6 +49,7 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
     }
 
     private void registerDiabetes() {
+        String age = editTextAge.getText().toString().trim();
         String pregnancies = editTextPregnancies.getText().toString().trim();
         String glucose = editTextGlucose.getText().toString().trim();
         String bp = editTextBP.getText().toString().trim();
@@ -55,6 +57,12 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
         String insulin = editTextInsulin.getText().toString().trim();
         String bmi = editTextBMI.getText().toString().trim();
         String dpf = editTextDPF.getText().toString().trim();
+
+        if (age.isEmpty()){
+            editTextAge.setError("You must input all values to proceed!");
+            editTextAge.requestFocus();
+            return;
+        }
 
         if (pregnancies.isEmpty()){
             editTextPregnancies.setError("You must input all values to proceed!");
@@ -98,7 +106,7 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
             return;
         }
 
-        Diabetes diabetes = new Diabetes(pregnancies, glucose, bp, skinThickness, insulin, bmi, dpf);
+        Diabetes diabetes = new Diabetes(age, pregnancies, glucose, bp, skinThickness, insulin, bmi, dpf);
         FirebaseDatabase.getInstance().getReference("DiabetesMedicalReport")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .setValue(diabetes).addOnCompleteListener(new OnCompleteListener<Void>() {

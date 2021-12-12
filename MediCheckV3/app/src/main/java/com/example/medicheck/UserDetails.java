@@ -38,7 +38,7 @@ public class UserDetails extends AppCompatActivity {
         userID = user.getUid();
 
         final TextView textViewName = findViewById(R.id.textViewName);
-        final TextView textViewAge = findViewById(R.id.textViewAge);
+        final TextView textViewDob = findViewById(R.id.textViewDob);
         final TextView textViewEmail = findViewById(R.id.textViewEmail);
         final TextView textViewMessage  = findViewById(R.id.textViewMessage);
         final TextView textViewGender = findViewById(R.id.textViewGender);
@@ -60,7 +60,7 @@ public class UserDetails extends AppCompatActivity {
 
                 if(user != null){
                     String name = user.name;
-                    String age = user.age;
+                    String dob = user.dob;
                     String email = user.email;
                     String gender = user.gender;
                     String diabetes = user.diabetes;
@@ -68,7 +68,7 @@ public class UserDetails extends AppCompatActivity {
 
                     textViewMessage.setText("Welcome, " + name + ", here are your details on record:");
                     textViewName.setText(name);
-                    textViewAge.setText(age);
+                    textViewDob.setText(dob);
                     textViewEmail.setText(email);
                     textViewGender.setText(gender);
                     textViewDiabetes.setText(diabetes);
