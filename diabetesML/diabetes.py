@@ -1,29 +1,8 @@
 import uuid
-
 import numpy as np
 import pandas as pd
-import uuid
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-import keras
-from tensorflow.python import tf2
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation
-from keras.callbacks import ModelCheckpoint
 import pyrebase
-from collections import OrderedDict
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
-from sklearn.metrics import accuracy_score
+from diabetes_model import model
 
 
 # CONNECTING FIREBASE TO PYTHON
@@ -66,46 +45,6 @@ fb_insulin = res[5]
 fb_pregnancies = res[6]
 fb_skinThickness = res[7]
 
-# Create DataFrame
-df = pd.read_csv('diabetes-training-set.csv')
-
-"""
-print("Diabetes data set dimensions : {}".format(df.shape))
-print(df.groupby('outcome').size())
-# Checking data where value is equal to 0
-print("Total : ", df[df.bp == 0].shape[0])
-print("Total : ", df[df.glucose == 0].shape[0])
-print("Total : ", df[df.skinThickness == 0].shape[0])
-print("Total : ", df[df.bmi == 0].shape[0])
-print("Total : ", df[df.insulin == 0].shape[0])
-"""
-
-# Data Cleansing
-df_clean = df[(df.bp != 0) & (df.bmi != 0) & (df.glucose != 0) & (df.skinThickness != 0) & (df.insulin != 0)]
-# print(df_clean.shape)
-
-# Define features
-feature_names = ['pregnancies', 'glucose', 'bp', 'skinThickness', 'insulin', 'bmi', 'dpf', 'age']
-
-# Create Input and Output
-X = df_clean[feature_names]
-y = df_clean.outcome
-
-# Define Model
-model = LogisticRegression(solver='lbfgs', max_iter=1000)
-
-# Fit Model
-model.fit(X, y)
-
-# Make Predictions
-yhat = model.predict(X)
-
-"""
-# Print Accuracy of Model
-acc = accuracy_score(y, yhat)
-print(acc)
-"""
-
 # Make Predictions Based on Input
 new_input = [[float(fb_pregnancies), float(fb_glucose), float(fb_bp), float(fb_skinThickness), float(fb_insulin),
               float(fb_bmi), float(fb_dpf), float(fb_age)]]
@@ -113,7 +52,9 @@ new_output = model.predict(new_input)
 # print(new_output)
 if new_output == 0:
     result = "Unlikely."
+    print(result)
     db.push(result)
 else:
     result = "Likely."
+    print(result)
     db.push(result)
