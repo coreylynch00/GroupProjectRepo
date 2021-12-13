@@ -1,9 +1,10 @@
-import uuid
+import json
+
 import numpy as np
 import pandas as pd
 import pyrebase
-from sklearn.metrics import accuracy_score
-
+import time
+import datetime
 from diabetes_model import model
 
 
@@ -29,7 +30,7 @@ db = firebase.database()
 auth = firebase.auth()
 
 # Read data from Firebase
-report = db.child("DiabetesMedicalReport").get()
+report = db.child("DiabetesMedicalReport").order_by_child("ts").get()
 
 uid_list = []
 for item in report:
@@ -40,6 +41,7 @@ print(uid_list)
 
 for report in report.each():
     dict_report = report.val()
+    print(dict_report)
     res = list(dict_report.values())
 
 # print(res)
@@ -59,9 +61,11 @@ new_output = model.predict(new_input)
 # print(new_output)
 if new_output == 0:
     result = "UNLIKELY"
+    db.child("DiabetesResult").child(uid_list[-1]).set(result)
     print(result)
-    db.child("DiabetesResult").child(uid_list[0]).set(result)
+    print(uid_list[-1])
 else:
     result = "LIKELY"
+    db.child("DiabetesResult").child(uid_list[-1]).set(result)
     print(result)
-    db.child("DiabetesResult").child(uid_list[0]).set(result)
+    print(uid_list[-1])

@@ -13,7 +13,10 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Date;
 
 public class diabetesPredict extends AppCompatActivity implements View.OnClickListener{
 
@@ -106,7 +109,10 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
             return;
         }
 
-        Diabetes diabetes = new Diabetes(age, pregnancies, glucose, bp, skinThickness, insulin, bmi, dpf);
+
+        long timestamp = System.currentTimeMillis()/1000;
+        String ts = Long.toString(timestamp);
+        Diabetes diabetes = new Diabetes(age, pregnancies, glucose, bp, skinThickness, insulin, bmi, dpf, ts);
         FirebaseDatabase.getInstance().getReference("DiabetesMedicalReport")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .setValue(diabetes).addOnCompleteListener(new OnCompleteListener<Void>() {
