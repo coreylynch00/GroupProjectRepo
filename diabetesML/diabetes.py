@@ -2,6 +2,8 @@ import uuid
 import numpy as np
 import pandas as pd
 import pyrebase
+from sklearn.metrics import accuracy_score
+
 from diabetes_model import model
 
 
@@ -29,10 +31,15 @@ auth = firebase.auth()
 # Read data from Firebase
 report = db.child("DiabetesMedicalReport").get()
 
-# print(report.val())
+uid_list = []
+for item in report:
+    uid = item.key()
+    uid_list.append(uid)
+
+print(uid_list)
+
 for report in report.each():
     dict_report = report.val()
-    # print(dict_report)
     res = list(dict_report.values())
 
 # print(res)
@@ -51,10 +58,10 @@ new_input = [[float(fb_pregnancies), float(fb_glucose), float(fb_bp), float(fb_s
 new_output = model.predict(new_input)
 # print(new_output)
 if new_output == 0:
-    result = "Unlikely."
+    result = "UNLIKELY"
     print(result)
-    db.push(result)
+    db.child("DiabetesResult").child(uid_list[0]).set(result)
 else:
-    result = "Likely."
+    result = "LIKELY"
     print(result)
-    db.push(result)
+    db.child("DiabetesResult").child(uid_list[0]).set(result)

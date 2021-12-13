@@ -38,82 +38,83 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/red"
                 android:paddingBottom="30dp"
-                android:text="Below are the details for your current GP: "/>
+                android:text="Below are the details for your current GP: "
+                android:textColor="@color/red"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewNameTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="GP Name: "
-                android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textViewEmailTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="GP Email Address: "
-                android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textViewPhoneTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="GP Phone Number: "
-                android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/callButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Call"
+                android:gravity="center"
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="3"
-                android:textSize="25sp"/>
+                android:text="Call"
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textViewRegisterGP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="20dp"
                 android:text="Register or Change Your GP Details Here!"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:paddingTop="20dp"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

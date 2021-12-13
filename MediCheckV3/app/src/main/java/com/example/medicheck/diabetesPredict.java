@@ -114,7 +114,7 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(diabetesPredict.this, "Data Successfully Received! \nPlease wait for your result to generate.", Toast.LENGTH_LONG).show();
-                    //startActivity(new Intent(diabetesPredict.this, diabetesResult.class));
+                    startActivity(new Intent(diabetesPredict.this, MediPredict.class));
                 }
                 else{
                     Toast.makeText(diabetesPredict.this, "Failed to Receive Data", Toast.LENGTH_LONG).show();

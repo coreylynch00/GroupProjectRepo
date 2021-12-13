@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MediPredict"
+    tools:context=".diabetesPredict"
     android:background="@drawable/background">
 
     <ScrollView
@@ -17,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.478">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,38 +34,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="30dp"
-                android:text="Welcome to MediPredict, please choose from one of the options below:"
-                android:textColor="@color/red"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:paddingBottom="70dp"
+                android:text="Please view you MediPredict result below:"/>
 
-            <Button
-                android:id="@+id/buttonDiabetesPredict"
+            <TextView
+                android:id="@+id/textViewResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Diabetes MediPredict"
-                android:shadowColor="@color/black"
-                android:shadowDx="2"
-                android:shadowDy="2"
-                android:shadowRadius="3" />
+                android:ems="10"
+                android:minHeight="48dp"
+                android:paddingBottom="70dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:gravity="center"/>
 
             <Button
-                android:id="@+id/buttonDiabetesPredictResult"
+                android:id="@+id/buttonBack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Diabetes MediPredict Result"
-                android:backgroundTint="@color/red"
-                android:shadowColor="@color/black"
-                android:shadowDx="2"
-                android:shadowDy="2"
-                android:shadowRadius="3" />
-
-            <Button
-                android:id="@+id/buttonHeartDiseasePredict"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Heart Disease MediPredict"
+                android:backgroundTint="#A30000"
+                android:text="Back"
+                android:textStyle="bold"
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="2"

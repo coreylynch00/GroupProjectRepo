@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class MediPredict extends AppCompatActivity {
 
-    Button buttonDiabetes, buttonHeartDisease;
+    Button buttonDiabetes, buttonDiabetesResult, buttonHeartDisease;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,15 @@ public class MediPredict extends AppCompatActivity {
                 startActivity(new Intent(MediPredict.this, diabetesPredict.class));
             }
         });
+
+        buttonDiabetesResult = findViewById(R.id.buttonDiabetesPredictResult);
+        buttonDiabetesResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MediPredict.this, diabetesResult.class));
+            }
+        });
+
         buttonHeartDisease = findViewById(R.id.buttonHeartDiseasePredict);
         buttonHeartDisease.setOnClickListener(new View.OnClickListener() {
             @Override

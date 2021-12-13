@@ -33,8 +33,8 @@ model = LogisticRegression(solver='lbfgs', max_iter=1000)
 model.fit(X, y)
 
 # Make Predictions
-yhat = model.predict(X)
+y_pred = model.predict(X)
 
 # Print Accuracy of Model
-acc = accuracy_score(y, yhat)
+acc = accuracy_score(y, y_pred)
 print(f"{acc * 100:.2f}% Accurate")
