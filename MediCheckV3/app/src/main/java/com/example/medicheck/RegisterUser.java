@@ -26,7 +26,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
     //Declare variables
     FirebaseAuth mAuth;
-    EditText editTextName, editTextDob, editTextEmail, editTextPassword;
+    EditText editTextName, editTextDob, editTextEmail, editTextPassword, editTextWallet;
     Button register;
     RadioGroup genderRadioGroup, diabetesRadioGroup, heartRadioGroup;
     RadioButton genderBtn, diabetesBtn, heartBtn;
@@ -40,6 +40,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
         editTextName = findViewById(R.id.editTextName);
         editTextDob = findViewById(R.id.editTextDob);
+        editTextWallet = findViewById(R.id.editTextWallet);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         genderRadioGroup = findViewById(R.id.radioGroupGender);
@@ -67,6 +68,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String name = editTextName.getText().toString().trim();
         String dob = editTextDob.getText().toString().trim();
+        String wallet = editTextWallet.getText().toString().trim();
         //Get user input for radio buttons
         int genderID = genderRadioGroup.getCheckedRadioButtonId();
         genderBtn = findViewById(genderID);
@@ -128,7 +130,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //If successful, create user object and pass it to Firebase
                         if(task.isSuccessful()){
-                            User user = new User(name, dob, email, gender, diabetes, heart);
+                            User user = new User(name, dob, email, gender, diabetes, heart, wallet);
                             //Passing user object to Firebase
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

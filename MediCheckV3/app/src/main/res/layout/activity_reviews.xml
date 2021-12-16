@@ -31,15 +31,67 @@
                 app:srcCompat="@drawable/logo" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textViewMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="30dp"
-                android:text="MediCheck Reviews"
+                android:paddingBottom="60dp"
+                android:text="Reviews"
                 android:textColor="@color/red"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewPrompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Write Your Review Below!"
+                android:paddingBottom="30dp"
+                android:textColor="@color/red"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editTextReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter your review here..."
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/buttonSubmitReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Review"
+                android:textSize="30dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textViewDisplayReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:paddingTop="20dp"
+                android:gravity="center"
+                android:text="Click here to check out other user reviews!" />
+
+
         </LinearLayout>
     </ScrollView>
 

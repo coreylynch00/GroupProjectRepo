@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCheck">
         <activity
+            android:name=".ShowReviews"
+            android:exported="true" />
+        <activity
             android:name=".diabetesResult"
             android:exported="true" />
         <activity

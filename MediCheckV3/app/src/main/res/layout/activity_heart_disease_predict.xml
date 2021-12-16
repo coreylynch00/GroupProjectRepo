@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".heartDiseasePredict"
+    tools:context=".diabetesPredict"
     android:background="@drawable/background">
 
     <ScrollView
@@ -17,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.478">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,12 +33,120 @@
                 android:id="@+id/textViewMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Heart Disease Predict Coming Soon..."
                 android:gravity="center"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:paddingBottom="30dp"/>
+                android:paddingBottom="30dp"
+                android:text="Enter your medical report results below in order to generate your heart disease prediction:"/>
+
+            <EditText
+                android:id="@+id/editTextAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Age"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextCP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Chest Pain Type"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextTRestBPS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Resting Blood Pressure"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextChol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Cholestoral Level"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextFBS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Fasting Blood Sugar Level"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextRestECG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Resting Electrocardiographic Results"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextThalach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Maximum Heart Rate Achieved"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextExang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Exercise Induced Angina"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextOldpeak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Depression Induced by Exercise Relative to Rest"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextSlope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Slope of Peak Exercise Segment"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Number of Major Vessels Coloured by Flourosopy"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextThal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Thalium Stress Test Result"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/buttonRegisterHeart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register Results"
+                android:textSize="30dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
+
         </LinearLayout>
     </ScrollView>
 

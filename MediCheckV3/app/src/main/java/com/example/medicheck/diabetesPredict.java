@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Date;
 
-public class diabetesPredict extends AppCompatActivity implements View.OnClickListener{
+public class diabetesPredict extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     EditText editTextAge, editTextPregnancies, editTextGlucose, editTextBP, editTextSkinThickness, editTextInsulin, editTextBMI, editTextDPF;
@@ -39,16 +39,12 @@ public class diabetesPredict extends AppCompatActivity implements View.OnClickLi
         editTextBMI = findViewById(R.id.editTextBMI);
         editTextDPF = findViewById(R.id.editTextDPF);
         registerDiabetes = findViewById(R.id.buttonRegisterDiabetes);
-        registerDiabetes.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.buttonRegisterDiabetes:
+        registerDiabetes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 registerDiabetes();
-                break;
-        }
+            }
+        });
     }
 
     private void registerDiabetes() {

@@ -1,38 +1,73 @@
-from sklearn.linear_model import LogisticRegression
+import numpy as np
 import pandas as pd
-from sklearn.metrics import accuracy_score
+import pyrebase
+import time
+import datetime
+from heart_disease_model import model
 
-df = pd.read_csv('heart_training_set.csv')
+# CONNECTING FIREBASE TO PYTHON
+firebaseConfig = {
+    "apiKey": "AIzaSyDvcv6TG1E-IxUJWtcEDHRy0vDomFYd_YI",
+    "authDomain": "medicheckv3.firebaseapp.com",
+    "databaseURL": "https://medicheckv3-default-rtdb.firebaseio.com",
+    "projectId": "medicheckv3",
+    "storageBucket": "medicheckv3.appspot.com",
+    "messagingSenderId": "797392677036",
+    "appId": "1:797392677036:web:807322344187de73c75709",
+    "measurementId": "G-QP4JH83Z7C",
+}
 
-# print(df.shape)
+# Connect to Firebase
+firebase = pyrebase.initialize_app(firebaseConfig)
 
-# Define features
-feature_names = ['age', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+# Create reference to Firebase
+db = firebase.database()
 
-# Create Input and Output
-X = df[feature_names]
-y = df.target
+# Reference To Auth Service
+auth = firebase.auth()
 
-# Define Model
-model = LogisticRegression(solver='lbfgs', max_iter=1000)
+# Read data from Firebase
+report = db.child("HeartDiseaseMedicalReport").order_by_child("ts").get()
 
-# Fit Model
-model.fit(X, y)
+uid_list = []
+for item in report:
+    uid = item.key()
+    uid_list.append(uid)
 
-# Make Predictions
-y_pred = model.predict(X)
+# print(uid_list)
 
-# Print Accuracy of Model
-acc = accuracy_score(y, y_pred)
-print(f"{acc * 100:.2f}% Accurate")
+for report in report.each():
+    dict_report = report.val()
+    # print(dict_report)
+    res = list(dict_report.values())
 
-# Take new input to make prediction
-new_input = [[67, 0, 160, 286, 0, 0, 108, 1, 1.5, 1, 3, 2]]
+# print(res)
+fb_age = res[0]
+fb_ca = res[1]
+fb_chol = res[2]
+fb_cp = res[3]
+fb_exang = res[4]
+fb_fbs = res[5]
+fb_oldpeak = res[6]
+fb_restecg = res[7]
+fb_slope = res[8]
+fb_thal = res[9]
+fb_thalach = res[10]
+fb_trestbps = res[11]
+
+# Make Predictions Based on Input
+new_input = [[float(fb_age), float(fb_cp), float(fb_trestbps), float(fb_chol), float(fb_fbs),
+              float(fb_restecg), float(fb_thalach), float(fb_exang), float(fb_oldpeak), float(fb_slope), float(fb_ca),
+              float(fb_thal)]]
 new_output = model.predict(new_input)
 # print(new_output)
 if new_output == 0:
     result = "UNLIKELY"
+    db.child("HeartDiseaseResult").child(uid_list[-1]).set(result)
     print(result)
+    # print(uid_list[-1])
 else:
     result = "LIKELY"
+    db.child("HeartDiseaseResult").child(uid_list[-1]).set(result)
     print(result)
+    # print(uid_list[-1])

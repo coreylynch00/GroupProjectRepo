@@ -1,12 +1,9 @@
-import json
-
 import numpy as np
 import pandas as pd
 import pyrebase
 import time
 import datetime
 from diabetes_model import model
-
 
 # CONNECTING FIREBASE TO PYTHON
 firebaseConfig = {
@@ -37,7 +34,7 @@ for item in report:
     uid = item.key()
     uid_list.append(uid)
 
-print(uid_list)
+# print(uid_list)
 
 for report in report.each():
     dict_report = report.val()
@@ -58,14 +55,14 @@ fb_skinThickness = res[7]
 new_input = [[float(fb_pregnancies), float(fb_glucose), float(fb_bp), float(fb_skinThickness), float(fb_insulin),
               float(fb_bmi), float(fb_dpf), float(fb_age)]]
 new_output = model.predict(new_input)
-# print(new_output)
+
 if new_output == 0:
     result = "UNLIKELY"
     db.child("DiabetesResult").child(uid_list[-1]).set(result)
     print(result)
-    print(uid_list[-1])
+    # print(uid_list[-1])
 else:
     result = "LIKELY"
     db.child("DiabetesResult").child(uid_list[-1]).set(result)
     print(result)
-    print(uid_list[-1])
+    # print(uid_list[-1])

@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="30dp"
-                android:text="MediCheck Main Menu"
+                android:text="Main Menu"
                 android:textColor="@color/red"
                 android:textSize="20dp"
                 android:textStyle="bold" />

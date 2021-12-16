@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".diabetesPredict"
+    tools:context=".Reviews"
     android:background="@drawable/background">
 
     <ScrollView
@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.478">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,35 +35,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="20dp"
-                android:textStyle="bold"
+                android:paddingBottom="60dp"
+                android:text="User Reviews"
                 android:textColor="@color/red"
-                android:paddingBottom="70dp"
-                android:text="Please view you MediPredict result below:"/>
-
-            <TextView
-                android:id="@+id/textViewResult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:minHeight="48dp"
-                android:paddingBottom="70dp"
-                android:textColor="@color/black"
-                android:textSize="17dp"
-                android:gravity="center"/>
-
-            <Button
-                android:id="@+id/buttonBack"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#A30000"
-                android:text="Back"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:shadowColor="@color/black"
-                android:shadowDx="2"
-                android:shadowDy="2"
-                android:shadowRadius="3" />
+                android:textStyle="bold" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listView"/>
+
 
         </LinearLayout>
     </ScrollView>

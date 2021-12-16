@@ -39,7 +39,7 @@ public class diabetesResult extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(diabetesResult.this, MainMenu.class));
+                startActivity(new Intent(diabetesResult.this, MediPredict.class));
             }
         });
 
