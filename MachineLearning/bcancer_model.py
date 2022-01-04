@@ -21,29 +21,16 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 # Create reference to Firebase
 db = firebase.database()
 
-df = pd.read_csv('diabetes-training-set.csv')
+df = pd.read_csv('bcancer-training-set.csv')
 
-"""
-print("Diabetes data set dimensions : {}".format(df.shape))
-print(df.groupby('outcome').size())
-# Checking data where value is equal to 0
-print("Total : ", df[df.bp == 0].shape[0])
-print("Total : ", df[df.glucose == 0].shape[0])
-print("Total : ", df[df.skinThickness == 0].shape[0])
-print("Total : ", df[df.bmi == 0].shape[0])
-print("Total : ", df[df.insulin == 0].shape[0])
-"""
-
-# Data Cleansing
-df_clean = df[(df.bp != 0) & (df.bmi != 0) & (df.glucose != 0) & (df.skinThickness != 0) & (df.insulin != 0)]
-# print(df_clean.shape)
+# print(df.shape)
 
 # Define features
-feature_names = ['pregnancies', 'glucose', 'bp', 'skinThickness', 'insulin', 'bmi', 'dpf', 'age']
+feature_names = ['mean_radius', 'mean_texture', 'mean_perimeter', 'mean_area', 'mean_smoothness']
 
 # Create Input and Output
-X = df_clean[feature_names]
-y = df_clean.outcome
+X = df[feature_names]
+y = df.diagnosis
 
 # Define Model
 model = LogisticRegression(solver='lbfgs', max_iter=1000)
@@ -56,4 +43,4 @@ y_pred = model.predict(X)
 
 # Print Accuracy of Model
 acc = accuracy_score(y, y_pred)
-db.child("DiabetesResultAccuracy").child().set(f"{acc * 100:.2f}% Accurate")
+db.child("BCancerResultAccuracy").child().set(f"{acc * 100:.2f}% Accurate")

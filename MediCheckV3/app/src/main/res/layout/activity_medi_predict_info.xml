@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MediPredict"
+    android:background="@drawable/background">
+
+
+    <LinearLayout
+        android:layout_width="385dp"
+        android:layout_height="703dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="30dp"
+            android:text="Please take note of the following information:"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDisclaimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:background="#20000000"
+            android:text="• MediPredict uses artificial intelligence to generate a prediction based of the data you have provided. These predictions are not always completely accurate. If you are concerned about your result, you should contact your GP immediately."
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textViewDiabetes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:background="#20000000"
+            android:text="• In order to generate a DIABETES prediction, you are required to have a medical examination complete and have the results available. The test results can be passed into our form in order to generate a prediction."
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textViewHeart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:background="#20000000"
+            android:text="• In order to generate a HEART DISEASE prediction, you are required to have a medical examination complete and have the results available. The test results can be passed into our form in order to generate a prediction."
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textViewBCancer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#20000000"
+            android:text="• In order to generate a BREAST CANCER prediction, you may self-assess the lump found and pass the required values into our form in order to generate a result. However, we DO NOT recommend this. We recommend being assessed by a registered GP in order to maintain the integrity and accuracy of the prediction."
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

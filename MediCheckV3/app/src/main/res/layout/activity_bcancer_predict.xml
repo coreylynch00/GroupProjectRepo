@@ -37,29 +37,55 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:paddingBottom="70dp"
-                android:text="Please view your MediPredict result below:"/>
+                android:paddingBottom="30dp"
+                android:text="Enter data below in order to generate your breast cancer prediction:" />
 
-            <TextView
-                android:id="@+id/textViewResult"
+            <EditText
+                android:id="@+id/editTextRadius"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:minHeight="48dp"
-                android:paddingBottom="70dp"
-                android:textColor="@color/black"
-                android:textSize="17dp"
-                android:background="#40000000"
-                android:gravity="center"/>
+                android:hint="Lump Radius"
+                android:minHeight="48dp" />
 
-            <Button
-                android:id="@+id/buttonBack"
+            <EditText
+                android:id="@+id/editTextTexture"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#A30000"
-                android:text="Back"
-                android:textSize="20dp"
-                android:textStyle="bold"
+                android:ems="10"
+                android:hint="Lump Texture"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextPerimeter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Lump Perimeter"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Lump Area"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextSmoothness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Lump Smoothness"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/buttonRegisterBCancer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register Results"
+                android:textSize="30dp"
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="2"

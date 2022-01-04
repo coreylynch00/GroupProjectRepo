@@ -45,7 +45,7 @@
                 android:id="@+id/buttonDiabetesPredict"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Diabetes MediPredict"
+                android:text="Diabetes Prediction"
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="2"
@@ -55,22 +55,66 @@
                 android:id="@+id/buttonDiabetesPredictResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Diabetes MediPredict Result"
+                android:text="Diabetes Prediction Result"
                 android:backgroundTint="@color/red"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/buttonHeartDiseasePredict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heart Disease Prediction"
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="3" />
 
             <Button
-                android:id="@+id/buttonHeartDiseasePredict"
+                android:id="@+id/buttonHeartDiseasePredictResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Heart Disease MediPredict"
+                android:text="Heart Disease Prediction Result"
+                android:backgroundTint="@color/red"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/buttonBCancerPredict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Breast Cancer Prediction"
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="3" />
+
+            <Button
+                android:id="@+id/buttonBCancerPredictResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Breast Cancer Prediction Result"
+                android:backgroundTint="@color/red"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/textViewMoreInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="For more information on MediPredict, please click here!"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="#40000000"/>
 
         </LinearLayout>
     </ScrollView>

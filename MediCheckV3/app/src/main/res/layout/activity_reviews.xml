@@ -66,7 +66,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:background="#40000000"/>
 
             <Button
                 android:id="@+id/buttonSubmitReview"

@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainMenu extends AppCompatActivity implements View.OnClickListener{
 
     //Declare variables
-    Button logout, userDetails, gpDetails, insuranceDetails, review, mediPredict;
+    Button logout, userDetails, gpDetails, insuranceDetails, review, mediPredict, mediCoin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,8 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener{
         review.setOnClickListener(this);
         mediPredict = findViewById(R.id.buttonMediPredict);
         mediPredict.setOnClickListener(this);
+        mediCoin = findViewById(R.id.buttonMediCoin);
+        mediCoin.setOnClickListener(this);
     }
 
     //onClick method
@@ -62,6 +64,9 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener{
             //If MediPredict button is clicked
             case R.id.buttonMediPredict:
                 startActivity(new Intent(MainMenu.this, MediPredict.class));
+                break;
+            case R.id.buttonMediCoin:
+                startActivity(new Intent(MainMenu.this, MediCoin.class));
                 break;
         }
     }

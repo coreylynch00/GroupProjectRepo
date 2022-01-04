@@ -50,7 +50,8 @@
                 android:text="Name: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewName"
@@ -58,7 +59,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewAgeTitle"
@@ -67,7 +69,8 @@
                 android:text="Date Of Birth: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewDob"
@@ -75,7 +78,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewEmailTitle"
@@ -84,7 +88,8 @@
                 android:text="Email Address: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewEmail"
@@ -92,7 +97,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewGenderTitle"
@@ -101,7 +107,8 @@
                 android:text="Gender: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewGender"
@@ -109,7 +116,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewDiabetesTitle"
@@ -118,7 +126,8 @@
                 android:text="Diabetes: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewDiabetes"
@@ -126,7 +135,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewHeartTitle"
@@ -135,14 +145,16 @@
                 android:text="Heart Conditions: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewHeart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="25sp"/>
+                android:textSize="25sp"
+                android:background="#40000000"/>
 
         </LinearLayout>
     </ScrollView>

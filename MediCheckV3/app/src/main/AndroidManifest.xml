@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCheck">
         <activity
+            android:name=".MediCoin"
+            android:exported="true" />
+        <activity
+            android:name=".bCancerResult"
+            android:exported="true" />
+        <activity
+            android:name=".MediPredictInfo"
+            android:exported="true" />
+        <activity
+            android:name=".bCancerPredict"
+            android:exported="true" />
+        <activity
+            android:name=".heartDiseaseResult"
+            android:exported="true" />
+        <activity
             android:name=".ShowReviews"
             android:exported="true" />
         <activity

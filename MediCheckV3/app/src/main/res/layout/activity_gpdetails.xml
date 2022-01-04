@@ -51,7 +51,8 @@
                 android:text="GP Name: "
                 android:textColor="@color/red"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewName"
@@ -59,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewEmailTitle"
@@ -68,7 +70,8 @@
                 android:text="GP Email Address: "
                 android:textColor="@color/red"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewEmail"
@@ -76,7 +79,8 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewPhoneTitle"
@@ -85,7 +89,8 @@
                 android:text="GP Phone Number: "
                 android:textColor="@color/red"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewPhone"
@@ -93,7 +98,8 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:background="#40000000"/>
 
             <Button
                 android:id="@+id/callButton"

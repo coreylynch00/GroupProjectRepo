@@ -38,7 +38,7 @@ public class ShowReviews extends AppCompatActivity {
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ShowReviews.this, Reviews.class));
+                startActivity(new Intent(ShowReviews.this, MainMenu.class));
             }
         });
 

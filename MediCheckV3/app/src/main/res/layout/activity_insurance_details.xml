@@ -51,7 +51,8 @@
                 android:text="Insurance Company: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewName"
@@ -59,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewEmailTitle"
@@ -68,7 +70,8 @@
                 android:text="Insurer Email: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewEmail"
@@ -76,7 +79,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewPhoneTitle"
@@ -85,7 +89,8 @@
                 android:text="Insurer Contact Number: "
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:background="#40000000"/>
 
             <TextView
                 android:id="@+id/textViewPhone"
@@ -93,7 +98,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:paddingBottom="10dp"/>
+                android:paddingBottom="10dp"
+                android:background="#40000000"/>
 
             <Button
                 android:id="@+id/callButton"
@@ -104,7 +110,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="3"
-                android:textSize="25sp"/>
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textViewRegisterIns"

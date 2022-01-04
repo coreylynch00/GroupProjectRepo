@@ -1,6 +1,25 @@
 from sklearn.linear_model import LogisticRegression
 import pandas as pd
 from sklearn.metrics import accuracy_score
+import pyrebase
+
+# CONNECTING FIREBASE TO PYTHON
+firebaseConfig = {
+    "apiKey": "AIzaSyDvcv6TG1E-IxUJWtcEDHRy0vDomFYd_YI",
+    "authDomain": "medicheckv3.firebaseapp.com",
+    "databaseURL": "https://medicheckv3-default-rtdb.firebaseio.com",
+    "projectId": "medicheckv3",
+    "storageBucket": "medicheckv3.appspot.com",
+    "messagingSenderId": "797392677036",
+    "appId": "1:797392677036:web:807322344187de73c75709",
+    "measurementId": "G-QP4JH83Z7C",
+}
+
+# Connect to Firebase
+firebase = pyrebase.initialize_app(firebaseConfig)
+
+# Create reference to Firebase
+db = firebase.database()
 
 df = pd.read_csv('heart_training_set.csv')
 
@@ -25,4 +44,4 @@ y_pred = model.predict(X)
 
 # Print Accuracy of Model
 acc = accuracy_score(y, y_pred)
-print(f"{acc * 100:.2f}% Accurate")
+db.child("HeartDiseaseResultAccuracy").child().set(f"{acc * 100:.2f}% Accurate")
