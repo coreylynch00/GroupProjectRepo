@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:minHeight="48dp"
-                android:paddingBottom="70dp"
+                android:padding="10dp"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 android:background="#40000000"
@@ -63,7 +63,8 @@
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="2"
-                android:shadowRadius="3" />
+                android:shadowRadius="3"
+                android:layout_marginTop="50dp"/>
 
         </LinearLayout>
     </ScrollView>
